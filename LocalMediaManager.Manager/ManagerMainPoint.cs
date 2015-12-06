@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
-using log4net;
-using log4net.Config;
 using LocalMediaManager.Configuration.Contracts;
 using LocalMediaManager.Logging;
+using log4net;
 using StructureMap;
+//using LocalMediaManager.WebApi;
 
 namespace LocalMediaManager.Manager
 {
@@ -42,8 +35,9 @@ namespace LocalMediaManager.Manager
                 ServiceBase[] ServicesToRun;
                 ServicesToRun = new ServiceBase[]
                 {
-
+                    //new WebApiService()
                 };
+
                 ServiceBase.Run(ServicesToRun);
             }
         }
